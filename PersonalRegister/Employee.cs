@@ -7,15 +7,17 @@ namespace PersonalRegister
     public class Employee
     {
         private string name;
-        private float salary;
-        public Employee(string name, float salary)
+        private int salary;
+        public Employee(string name, int salary)
         {
-            
+            this.name = name;
+            this.salary = salary;
         }
 
-        public void PrintEmployee()
+        public string PrintEmployee()
         {
-
+            Console.WriteLine($"{name} {salary:C}");
+            return $"{name}: {salary:C}";
         }
     }
 }
